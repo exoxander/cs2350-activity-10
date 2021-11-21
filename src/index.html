@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Project Starter</title>
+  <title>Postcards</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Don't change the paths of the following two lines - They are produced by webpack-->
@@ -11,10 +11,70 @@
 </head>
 
 <body>
-  
-  <!-- Your HTML goes here -->
-  <h1>Welcome to CS 2350!</h1>
-  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Alex Lustig</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cards">Current Postcards</a>
+          </li>
+         
+          </li>
+        </ul>
+        <button class="btn btn-success ms-auto" id="new-card">
+          New Postcard
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="jumbotron container-fluid py-5">
+    <div class="py-5 text-light">
+      <h1 class="display-4">
+        Postcards!
+      </h1>
+      <p class="lead">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi modi repudiandae voluptatem at, error explicabo, dolor laboriosam, fuga reprehenderit sunt officia molestiae cum consequuntur. Velit dolore nesciunt mollitia. Est, laudantium.
+      </p>
+    </div>
+  </div>
+
+  <div class="container my-3">
+    <h1>Current Postcards</h1>
+    <form id="card-form" class="d-none" method="post">
+      <div class="mb-3">
+        <label for="place" class="form-label">Place</label>
+        <input type="text" class="form-control" id="place" name="place" placeholder="enter place here">
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Description</label>
+        <textarea class="form-control" id="desc" name="desc" placeholder="enter description here"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="poster" class="form-label">Poster</label>
+        <input type="url" class="form-control" id="poster" name="poster" placeholder="enter poster URL here">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="button" class="btn btn-danger to-cancel">Cancel</button>
+    </form>
+    
+    <div class="row row-cols-2 my-5" id="cards">
+
+    </div>
+  </div>
+
+  <footer class="mt-4 bg-dark py-5 text-light">
+    <p class="lead text-center">
+      &copy; All Rights Reserved
+    </p>
+  </footer>
   
   <!-- Leave the following line as is at the end of body -->
   <script src="javascripts/main.js"></script>
